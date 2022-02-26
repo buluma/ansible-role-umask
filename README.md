@@ -4,7 +4,7 @@ Install and configure umask on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-umask/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-umask/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-umask/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-umask)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/umask)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/umask)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-umask.svg)](https://github.com/buluma/ansible-role-umask/releases/)|
+|[![github](https://github.com/buluma/ansible-role-umask/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-umask/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-umask/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-umask)|[![quality](https://img.shields.io/ansible/quality/58217)](https://galaxy.ansible.com/buluma/umask)|[![downloads](https://img.shields.io/ansible/role/d/58217)](https://galaxy.ansible.com/buluma/umask)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-umask.svg)](https://github.com/buluma/ansible-role-umask/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -18,7 +18,20 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
   roles:
     - role: buluma.umask
-      umask: "0027"```
+      umask: "0027"
+```
+
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+- name: prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
+```
 
 
 ## [Role Variables](#role-variables)
@@ -26,7 +39,12 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 The default values for the variables are set in `defaults/main.yml`:
 ```yaml
 ---
-# defaults file for ansible-role-umask
+# defaults file for umask
+
+umask: "0022"
+
+umask_users:
+  - root
 ```
 
 ## [Requirements](#requirements)
