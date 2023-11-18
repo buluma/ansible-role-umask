@@ -1,4 +1,4 @@
-# [umask](#umask)
+# [Ansible role umask](#umask)
 
 Install and configure umask on your system.
 
