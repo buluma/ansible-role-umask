@@ -5,4 +5,4 @@
 repository:
   description: Install and configure umask on your system.
   homepage: https://buluma.github.io/
-  topics: umask, ansible, molecule, tox, playbook
+  topics: umask, ansible, molecule, playbook
