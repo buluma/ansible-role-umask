@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-umask/compare/24.3.31...HEAD)
 
+**Closed issues:**
+
+- rebuild action [\#11](https://github.com/buluma/ansible-role-umask/issues/11)
+
 **Merged pull requests:**
 
 - Bump ansible/ansible-lint from 24.12.1 to 24.12.2 [\#30](https://github.com/buluma/ansible-role-umask/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
