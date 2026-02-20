@@ -10,7 +10,7 @@
   ansible.builtin.lineinfile:
     path: ~/.bashrc
     line: "umask {{ umask }}"
-    regexp: '^umask\s+\d+'
+    regexp: "^umask\\s+\\d+"
     create: true
     mode: "0644"
   become: true
