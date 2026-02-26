@@ -48,7 +48,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 umask: "0022"
 
 umask_users:
-- root
+  - root
 ```
 
 ## [Requirements](#requirements)
